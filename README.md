@@ -12,5 +12,5 @@ A tool to visually create wireframe shapes from edges formed by selecting vertic
 <img src="https://i.imgur.com/xyDlgME.png" height="80%" width="80%" alt="Media Image"/>
 <br />
 <br />
-<img src="https://i.imgur.com/5PdRh6W.gif" height="80%" width="80%" alt="Media Image"/>
+<img src="https://i.imgur.com/nHnDigN.png" height="80%" width="80%" alt="Media Image"/>
 </p>
