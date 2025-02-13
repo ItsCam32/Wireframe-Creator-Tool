@@ -1,9 +1,9 @@
-<h1>Wireframe Creator Tool (Unity)</h1>
+<h1>Wireframe Creator Tool</h1>
 
 ### [Release Build](https://github.com/ItsCam32/Wireframe-Creator-Tool/releases/tag/v1.0.0)
 
 <h2>Description</h2>
-A tool to visually create wireframe shapes from edges formed by selecting vertices. Easily exportable 3D vector data for drawing in external programs.
+A tool to visually create wireframe shapes from edges formed by selecting vertices. Easily exportable 3D vector data for drawing in external programs. Created in Unity.
 <br />
 
 <h2>Media</h2>
