@@ -4,7 +4,9 @@
 
 <h2>Description</h2>
 A tool to visually create wireframe shapes from edges formed by selecting vertices. Easily exportable 3D vector data for drawing in external programs. Created in Unity.
-<br />
+<br>
+<br>
+<b>Created in the Unity engine.</b>
 
 <h2>Media</h2>
 
