@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
+using System;
 
 public class NodeSelector : MonoBehaviour
 {
@@ -181,15 +182,29 @@ public class NodeSelector : MonoBehaviour
             if (grid)
             {
                 Vector3 simplifiedVertex = vertices[i] / grid.Scale;
-                dataString += $"Vector3({simplifiedVertex.x}, {simplifiedVertex.y}, {simplifiedVertex.z})";
+                string xString = simplifiedVertex.x % 1 == 0 ? $"{simplifiedVertex.x}.0f" : $"{simplifiedVertex.x}f";
+                string yString = simplifiedVertex.y % 1 == 0 ? $"{simplifiedVertex.y}.0f" : $"{simplifiedVertex.y}f";
+                string zString = simplifiedVertex.z % 1 == 0 ? $"{simplifiedVertex.z}.0f" : $"{simplifiedVertex.z}f";
+
+                dataString += $"Vector3({xString}, {yString}, {zString})";
             }
-            
+
             // Separator
             if (i < vertices.Count - 1)
             {
                 dataString += ", ";
             }
+
+            if ((i + 1) % 3 == 0)
+            {
+                dataString += "\n";
+            }
         }
+
+        string xPivotString = UI_Manager.Instance.pivotX % 1 == 0 ? $"{UI_Manager.Instance.pivotX}.0f" : $"{UI_Manager.Instance.pivotX}f";
+        string yPivotString = UI_Manager.Instance.pivotY % 1 == 0 ? $"{UI_Manager.Instance.pivotY}.0f" : $"{UI_Manager.Instance.pivotY}f";
+        string zPivotString = UI_Manager.Instance.pivotZ % 1 == 0 ? $"{UI_Manager.Instance.pivotZ}.0f" : $"{UI_Manager.Instance.pivotZ}f";
+        dataString += $"\n\nPivot: Vector3({xPivotString}, {yPivotString}, {zPivotString})";
 
         string path = Application.dataPath + Path.DirectorySeparatorChar + "/StreamingAssets/WireframeData.txt";
         using StreamWriter writer = new StreamWriter(path, false);

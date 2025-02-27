@@ -11,7 +11,7 @@ public class Grid : MonoBehaviour
     [SerializeField]
     private Transform cameraTransform;
 
-    [Range(5, 100)]
+    [Range(1, 100)]
     [SerializeField]
     private int nodeSpacing;
 
@@ -63,7 +63,7 @@ public class Grid : MonoBehaviour
 
             // Scale nodes down as they get further away
             distance = 50.0f / distance;
-            distance = Mathf.Clamp(distance, 0.0f, 1.0f);
+            distance = Mathf.Clamp(distance, 0.0f, 0.5f);
             node.Key.transform.localScale = new Vector3(distance, distance, distance);
         }
     }
@@ -73,10 +73,19 @@ public class Grid : MonoBehaviour
 
     public void BuildGrid(int gridSize)
     {
-        if (gridSize % 2 == 0) gridSize++;
-        gridSize += 2;
+        //if (gridSize % 2 != 0) gridSize++;
 
-        float min = -((gridSize - 1) / 2 * nodeSpacing);
+        float min;
+        if (gridSize % 2 == 0)
+        {
+            min = -((gridSize / 2) * nodeSpacing) - nodeSpacing / 2.0f;
+        }
+        else
+        {
+            gridSize += 2;
+            min = -((gridSize / 2) * nodeSpacing);
+        }
+
         float max = -min;
         Bounds = max;
 

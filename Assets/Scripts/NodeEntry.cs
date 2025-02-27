@@ -29,7 +29,7 @@ public class NodeEntry : MonoBehaviour
         nodePosition = position;
 
         position /= scale;
-        positionText.text = $"{position.x.ToString("F0")}, {position.y.ToString("F0")}, {position.z.ToString("F0")}";
+        positionText.text = $"{position.x.ToString("F1")}, {position.y.ToString("F1")}, {position.z.ToString("F1")}";
     }
 
     public void OnFocusButtonClicked()

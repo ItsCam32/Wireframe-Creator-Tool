@@ -46,7 +46,7 @@ public class CameraMovement : MonoBehaviour
             cameraSpeed -= 10.0f;
         }
 
-        cameraSpeed = Mathf.Clamp(cameraSpeed, 10f, 500.0f);
+        cameraSpeed = Mathf.Clamp(cameraSpeed, 10f, 150.0f);
         UI_Manager.Instance.UpdateCameraSpeedText($"Camera Speed: {(cameraSpeed / 10.0f).ToString("F0")}");
     }
 

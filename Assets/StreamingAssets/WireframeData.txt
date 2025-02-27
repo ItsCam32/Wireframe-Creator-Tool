@@ -1,1 +1,3 @@
-Vector3(-1, 0, 1), Vector3(-1, 0, 0), Vector3(-1, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 1)
+
+
+Pivot: Vector3(0.0f, 0.0f, 0.0f)
