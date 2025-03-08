@@ -6986,6 +6986,9 @@ MonoBehaviour:
   mainMenu: {fileID: 308275715}
   cameraSpeedText: {fileID: 400743382}
   nodesText: {fileID: 492710199}
+  pivotX: 0
+  pivotY: 0
+  pivotZ: 0
 --- !u!1 &1695413241
 GameObject:
   m_ObjectHideFlags: 0

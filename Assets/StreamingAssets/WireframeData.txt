@@ -1,3 +1,5 @@
-
+Vector3(0.5f, -0.5f, 0.5f), Vector3(-0.5f, -0.5f, 0.5f), Vector3(-0.5f, -0.5f, 0.5f), 
+Vector3(-0.5f, 0.5f, 0.5f), Vector3(-0.5f, 0.5f, 0.5f), Vector3(0.5f, 0.5f, 0.5f), 
+Vector3(0.5f, 0.5f, 0.5f), Vector3(0.5f, -0.5f, 0.5f)
 
 Pivot: Vector3(0.0f, 0.0f, 0.0f)
